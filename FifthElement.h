@@ -14,7 +14,7 @@ public:
     T getFifthElement();
     void insertNewFifthElement(const T&value);
     void deleteFifthElement();
-    void swapFourthAndFifthElement(); //switch/rearrange pointers, not the data that is being pointed to
+    void swapFourthAndFifthElement(); 
 
 private:
 
@@ -38,7 +38,7 @@ T FifthElement<T>::getFifthElement() //returns data at 5th element
 }
 
 template <class T>
-void FifthElement<T>::insertNewFifthElement(const T &value) //inserts a node between existing nodes 4 and 5(5->6
+void FifthElement<T>::insertNewFifthElement(const T &value) //inserts a node between existing nodes 4 and 5 and updates subsequent nodes
 {
 
     auto newFifth = new Node<T>(value);
@@ -60,7 +60,7 @@ void FifthElement<T>::insertNewFifthElement(const T &value) //inserts a node bet
 }
 
 template <class T>
-void FifthElement<T>::deleteFifthElement() //deletes 5th node, if there are 6 nodes, 4 will point to 6. if 5th is last, 4 ->new back node
+void FifthElement<T>::deleteFifthElement() //deletes 5th node, if there are 6 nodes, 4 will point to 6. if 5th is last, 4 is becomes last element in list
 {
     auto temp = LinkedList<T>::front;
     bool flag = true;
@@ -81,7 +81,7 @@ void FifthElement<T>::deleteFifthElement() //deletes 5th node, if there are 6 no
 }
 
 template <class T>
-void FifthElement<T>::swapFourthAndFifthElement() //rearranges 4 and 5 nodes. swap pointers, not data
+void FifthElement<T>::swapFourthAndFifthElement() //rearranges nodes 4 and 5.
 {
     auto temp = LinkedList<T>::front;
     bool flag = true;
